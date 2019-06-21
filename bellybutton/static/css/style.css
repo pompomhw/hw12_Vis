@@ -1,0 +1,27 @@
+/* remove default margin and padding from body */
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* set map, body, and html to 100% of the screen size */
+  #map,
+  body,
+  html {
+    height: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .leaflet-popup-content img {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .navbar-nav{
+    position: absolute;
+    right: 20px;
+  }
+  
