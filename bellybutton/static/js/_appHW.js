@@ -52,7 +52,6 @@ function buildMetadata(sample) {
         };
       data2.sort((a,b)=>b.sample_values-a.sample_values); 
       data3=data2.slice(0,10);
-      console.log(data3);
       var trace2={
         labels:  data3.map(row=>row.otu_ids),
         values: data3.map(row=>row.sample_values), 
