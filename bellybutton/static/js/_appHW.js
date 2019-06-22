@@ -1,10 +1,7 @@
 function buildMetadata(sample) {
-
-    // @TODO: Complete the following function that builds the metadata panel
     var url=`/metadata/${sample}`
     d3.json(url).then (function(data) {
       console.log(data);
-  
       var selector = d3.select("#sample-metadata");
       selector.html("");
       Object.entries(data).forEach(([key,value]) => {
@@ -12,13 +9,10 @@ function buildMetadata(sample) {
       });
 
       draw_gauge(data.WFREQ);
-      // console.log(data[WREQ])
     });
   }
   
-
   function buildCharts(sample) {
-
     // prep data for bubble chart & pie chart
     var url=`/samples/${sample}`
     d3.json(url).then ( function(data1) {
