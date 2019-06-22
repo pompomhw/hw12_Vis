@@ -12,7 +12,7 @@ function buildMetadata(sample) {
       });
 
       draw_gauge(data.WFREQ);
-      console.log(data[WREQ])
+      // console.log(data[WREQ])
     });
   }
   
@@ -26,6 +26,7 @@ function buildMetadata(sample) {
       var ids=data1['otu_ids'];
       var val=data1['sample_values'];
       var labs=data1['otu_labels'];
+      var upper=Math.max(...val)*1.5;
 
     //-------------------------------------
     //   draw a bubble chart
@@ -39,7 +40,8 @@ function buildMetadata(sample) {
           }
       var bubble_data = [trace1];
       var layout = {
-        xaxis: {title: "OTU ID"},
+        yaxis:{range:[0,upper]},
+        xaxis: {title: "OTU ID"}
       };
       Plotly.newPlot('bubble', bubble_data, layout);
 
